@@ -1,0 +1,88 @@
+body {
+  margin: 0px;
+  font-family: "Barlow semi condensed";
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Barlow semi condensed";
+  src: url("./barlow-semi-condensed/BarlowSemiCondensed-Regular.ttf");
+}
+.mainHolder {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titleHolder {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  border: 1px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 20px;
+}
+.titleName {
+  text-wrap: wrap;
+}
+.scoreHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 25%;
+  border-radius: 5px;
+}
+.scoreTitle {
+  color: hsl(229, 64%, 46%);
+  font-size: small;
+}
+.scoreCount {
+  color: hsl(229, 25%, 31%);
+  font-size: xxx-large;
+}
+.screen1Holder {
+  width: 370px;
+  background-image: url("./images/bg-triangle.svg");
+  margin-top: 50px;
+  background-position-y: 50px;
+  background-repeat: no-repeat;
+  background-position-x: 25px;
+}
+.screen1InnerHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: "./images/bg-triangle.svg";
+}
+.paperScissorHolder {
+  display: flex;
+  justify-content: space-between;
+}
+.rockHolder {
+  display: flex;
+  align-self: center;
+  margin-top: 50px;
+}
+.gestureHolder {
+  padding: 20px;
+  border-radius: 100%;
+}
+.gestureHolder.paper {
+  background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.gestureHolder.scissors {
+  background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.gestureHolder.rock {
+  background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+/* border: 15px solid white; */
+
+.innerCircle {
+  background: white;
+  border-radius: 100%;
+  padding: 20px;
+}
