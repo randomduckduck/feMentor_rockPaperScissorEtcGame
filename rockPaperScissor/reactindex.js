@@ -39,11 +39,33 @@ function Screen1() {
     </div>
   );
 }
-function MakeGestureWithCircle({ imgsrc, alt }) {
+function MakeGestureWithCircle({ imgsrc = null, alt = "blank" }) {
   return (
     <div className={"gestureHolder " + alt}>
       <div className="innerCircle">
-        <img src={imgsrc} alt={alt} />
+        {imgsrc === null ? false : <img src={imgsrc} alt={alt} />}
+      </div>
+    </div>
+  );
+}
+// function EmptyCircle() {
+//   return(
+//     <div className="gestureHolder"></div>
+//   )
+// }
+function Screen2() {
+  return (
+    <div className="screen2Holder">
+      <div className="yourPickSection">
+        <div className="yourpickTitle">YOU PICKED</div>
+        <MakeGestureWithCircle
+          imgsrc="./images/icon-paper.svg"
+          alt="paper"
+        ></MakeGestureWithCircle>
+      </div>
+      <div className="housepicksection">
+        <div className="housepickTitle">THE HOUSE PICKED</div>
+        <MakeGestureWithCircle></MakeGestureWithCircle>
       </div>
     </div>
   );
@@ -70,6 +92,7 @@ function Main() {
     <div className="mainHolder">
       <Title score={score} setScore={setScore}></Title>
       <Screen1></Screen1>
+      <Screen2></Screen2>
       <Images></Images>
     </div>
   );

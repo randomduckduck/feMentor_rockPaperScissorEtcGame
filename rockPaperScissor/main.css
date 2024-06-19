@@ -70,6 +70,15 @@ body {
   padding: 20px;
   border-radius: 100%;
 }
+.gestureHolder.blank {
+  background-color: rgba(2, 2, 2, 0.2);
+  height: 100px;
+  width: 100px;
+}
+.gestureHolder.blank > .innerCircle {
+  background: none;
+  /* background-color: rgba(2, 2, 2, 0.2); */
+}
 .gestureHolder.paper {
   background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 }
@@ -80,9 +89,29 @@ body {
   background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
 }
 /* border: 15px solid white; */
-
+img {
+  width: 50px;
+  height: 50px;
+}
 .innerCircle {
   background: white;
   border-radius: 100%;
   padding: 20px;
+}
+
+/* ////// */
+.screen2Holder {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+/* .yourpickSection {
+    display: flex;
+    flex-direction: column;
+} */
+.yourpickTitle,
+.housepickTitle {
+  margin: 20px 0px;
+  text-align: center;
+  color: white;
 }
