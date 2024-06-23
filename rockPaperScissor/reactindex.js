@@ -43,7 +43,11 @@ function MakeGestureWithCircle({ imgsrc = null, alt = "blank" }) {
   return (
     <div className={"gestureHolder " + alt}>
       <div className="innerCircle">
-        {imgsrc === null ? false : <img src={imgsrc} alt={alt} />}
+        {imgsrc === null ? (
+          false
+        ) : (
+          <img className="gestureImage" src={imgsrc} alt={alt} />
+        )}
       </div>
     </div>
   );
